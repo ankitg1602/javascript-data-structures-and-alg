@@ -31,9 +31,8 @@ function validAnagram(str1, str2) {
         return false
     }
     let lookup = {}
-   
     for(let value of str1) {
-        lookup[str1] ? lookup[str1] += 1 : lookup[str1] = 1;
+        lookup[value] ? lookup[value] += 1 : lookup[value] = 1;
     }
     for(let value of str2) {
         if (!lookup[value]) {
@@ -43,7 +42,5 @@ function validAnagram(str1, str2) {
             lookup[value] -= 1
         }
     }
-   
     return true
-
 }
